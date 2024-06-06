@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-blue-800 text-white overflow-x-hidden">
+   <nav class=" flex items-center justify-between gap-4 w-[100vw] overflow-x-none">
+    <div class="font-bold text-4xl m-4">TechTrends</div>
+    <div>
+    <ul class="hidden sm:flex gap-6   items-center justify-center transition-all">
+        <li class="font-medium text-2xl  hover:text-gray-300">Home</li>
+        <li class="font-medium text-2xl  hover:text-gray-300">About</li>
+        <li class="font-medium text-2xl  hover:text-gray-300">Contact</li>
+        <li class="font-medium text-2xl  hover:text-gray-300">Organization</li>
+        <li class="font-medium text-2xl  hover:text-gray-300 ">Services</li>
+     
+    </ul>
+ 
+    
+    </div>
+    <div class="flex items-center justify-center px-3 gap-4">
+        <button class="bg-blue-500 text-2xl text-white hover:bg-blue-700 font-semibold right-auto top-3 px-3 rounded-xl py-2">Join Now</button>
+        <span class="sm:hidden text-blue-50">
+            <i class='text-4xl font-extrabold hover:scale-150 bx bx-menu' onclick="display()"> </i>
+        </span>
+    </div>
+   </nav>
+
+
+
+<div class="">
+<div id="contents " class="mx-auto mt-8 p-4 mb-12">
+    <h2 class="text-4xl text-center font-medium mb-4">Hello Welcome to Our App</h2>
+    <p class="text-center"> Lorem ipsum Lorem ipsum dolor sit. dolor sit amet consectetur adipisicing elit. Voluptatelor veritatis itaque esse saepe vitaem in ratione!</p>
+
+</div>
+<div  class="bg-white w-[100vw] h-[60vh] p-5 text-center">
+
+<div class=" bg-white w-[40%] border-2 border-blue-100  h-[40vw] shadow-xl shadow-blue-100 ">
+    <h2 class="text-black text-2xl font-medium border-b-2 border-blue-500 p-3 mx-auto items-center w-[70%] ">List of Items</h2>
+    <ul class="text-black text-left ml-7 p-4 ">
+    <li class="text-2xl fornt-medium p-3">Computer</li>
+    <li class="text-2xl fornt-medium p-3">Gadgets</li>
+    <li class="text-2xl fornt-medium p-3">Mobile Phones</li></ul>
+</div>
+</div>
+</div>
+
+
+   <script>
+   
+    function display() {
+        const navbar = document.querySelector('nav  ul');
+          navbar.classList = "absolute top-16 right-0 text-2xl text-white p-4 gap-4 w-[40vw] text-left  ml-12 bg-blue-800"
+        if(navbar.style.display == "block"){
+        navbar.style.display = "none"
+      
+    }else{
+        navbar.style.display = "block"
+    }
+}
+   </script>
+</body>
+</html>

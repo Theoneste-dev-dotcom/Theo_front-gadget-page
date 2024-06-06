@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-blue-800 text-white overflow-x-hidden">
+   <nav class="flex items-center justify-between gap-4 w-[100vw] overflow-x-none">
+      <div class="font-bold text-4xl m-4">TechTrends</div>
+      <ul class="hidden sm:flex gap-6 items-center justify-center transition-all">
+         <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">Home</li>
+         <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">About</li>
+         <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">Contact</li>
+         <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">Organization</li>
+         <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">Services</li>
+      </ul>
+      <div class="flex items-center justify-center px-3 gap-4">
+         <button class="bg-blue-500 text-white hover:bg-blue-700 font-semibold px-3 rounded-xl py-2">Join Now</button>
+         <span class="visible sm:hidden text-blue-50">
+            <i class='text-4xl font-extrabold hover:scale-150 bx bx-menu' onclick="display()"></i>
+         </span>
+      </div>
+   </nav>
+   <ul class="sm:hidden flex flex-col items-center gap-6 mt-4 hidden">
+      <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">Home</li>
+      <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">About</li>
+      <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">Contact</li>
+      <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">Organization</li>
+      <li class="font-medium text-xl hover:scale-125 hover:text-gray-800">Services</li>
+   </ul>
+   <script>
+      function display() {
+         const navbar = document.querySelector('nav + ul');
+         navbar.classList.toggle('hidden');
+      }
+   </script>
+</body>
+</html>
